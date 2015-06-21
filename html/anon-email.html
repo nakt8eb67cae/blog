@@ -1,0 +1,416 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!-- !DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" -->
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="cn" lang="cn">
+<head>
+    <title>匿名郵件的發送</title>
+    <meta name="generator" content="Bluefish"/>
+    <meta name="author" content="追本溯源"/>
+    <meta name="date" content="2015.06.20"/>
+    <meta name="copyright" content="(C) 追本溯源, 2015.06"/>
+    <meta name="keywords" content="追本溯源"/>
+    <meta name="description" content="匿名郵件的發送"/>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8"/>
+    <meta http-equiv="content-type" content="application/xhtml+xml; charset=UTF-8"/>
+    <meta http-equiv="content-style-type" content="text/cssl"/>
+    <meta http-equiv="expires" content="0"/>
+</head>
+
+<!-- --------------------------------------------------------------------- -->
+<!-- --------------------------------------------------------------------- -->
+<body bgcolor="#ffffff">
+<!-- --------------------------------------------------------------------- -->
+<h1 align="center">如何匿名發送 Email?</h1>
+<div align="center"><h3 align="center">(版本號：0.0)</h3></div>
+<div align="center"><h3 align="center">
+	<a href="http://cyber-china.blogspot.com">追本溯源</a>
+	<br />2015 年 6 月</h3></div>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+中共當局對言論的管控是非常嚴苛的。如果您想通過 email
+發佈一些中共當局或某個實權人物不喜歡的言論，哪怕是轉發，都有可能會鋃鐺入獄。
+這篇文章的目的就是要介紹一些技術，使您既可以通過 email 發送您想要（並且 email
+容許）發送的電子郵件，又免受中共當局的追查和迫害。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+任何事務都是既有好處又有壞處，我們這裏介紹的技術也不例外。
+中共當局及其擁躉肯定會說，犯罪分子可以利用這些手段更加放肆地幹壞事，<!--
+-->從而把本文作者打入誨淫誨盜的行列。對此，筆者只作兩點辯解：
+<ul>
+    <li>這些技術已經客觀存在，您用或不用，它都在那裏。且莫說間諜機構，即使像<!--
+    -->現代化的黑社會組織、洗錢或販毒組織等等，人家恐怕也都已掌握這些技術了。</li>
+    <li>相比於各種罪惡，在中國大陸乃至全球，中共極權統治的強悍存在乃是最大的<!--
+    -->罪惡。兩害相權取其輕，把這些技術介紹給致力於推翻中共統治的仁人志士、<!--
+    -->致力於維護自身或他人正當權益的普羅大衆、致力於提高全社會文明程度和<!--
+    -->現代化程度的各路英才，即使冒着犯罪分子同樣受益的風險，那也是絕對值得的。</li>
+</ul>
+</p>
+<h2>1. 註冊一個免費的 email 帳號</h2>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+最簡單的方式就是匿名地註冊一個免費的 email 帳號，在其中不透露任何個人信息，利用這個信箱發送 email。如果想要知道您真實身份的人只是一個很普通的公民，這也許就足夠了。但是，如果想知道您身份的人是一個強大的極權政府，那麼，挖出您只是看它想不想的問題了。所以，註冊一個免費的 email 帳號是必須的，但是遠遠不夠。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+如果您是一個大陸居民，要避免遭到中共當局的追查，那麼，您的 email 帳號必須要滿足以下條件：
+<ul>
+    <li>帳號是免費的——如果使用付費信箱，通過支付帳號就可以追蹤到您。</li>
+    <li>提供帳號的公司必須是開源社區、反共社區或外企，而且所選用的外企最好和中共當局的關係比較僵，否則，它把您的登錄信息向中共一提供，您就要暴露了。<br />
+    如果是沒有中心服務器的分佈式信箱（例如基於
+    <a href="https://geti2p.net">I2P</a> 的 I2P-Bote），那就更好了，但是，我們這裏重點討論的是常規的 email 信箱，這個問題後面會專門討論。</li>
+    <li>提供 email 帳號的社區或公司要有足夠的技術實力抵禦黑客的攻擊，要有數量巨大的用戶用以增加追蹤者的分析難度。</li>
+</ul>
+總之，試圖僅僅利用匿名的 email 帳號來保護您免於追查是不可能的，必須要配合下面的手段來構成全方位的防護。
+</p>
+<h2><a name="section2">2. 採用 Tor 進行網上活動</a></h2>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+如果要追查您的是強大的政府或黑社會組織，那我們就必須確保，當它們追查到上述 email
+帳號的時候，您還有另外的手段防護。這其中一個最常用的手段就是用
+<a href="https://www.torproject.org">Tor</a> 來保護您。作爲初級用戶，或者說，如果我們只是要匿名發送個不至於招惹到強大勢力的 email，使用 <a href="https://www.torproject.org/download/download-easy.html.en">Tor Browser</a> 就足夠了。如果您身處中國大陸，由於中共當局到處都是敏感神經，那最好還要配合各種軟件：從翻牆軟件、虛擬機一直到以 Tor 為代表的各種匿名軟件。關於翻牆軟件、虛擬機和 Tor 這三者的配合，請參看<a href="http://program-think.blogspot.com">編程隨想</a>的文章，例如
+<ul>
+    <li><a href="http://program-think.blogspot.nl/2009/09/break-through-gfw-with-tor.html">“如何翻牆”系列：戴“套”翻牆的方法</a></li>
+    <li><a href="http://program-think.blogspot.nl/2010/04/howto-cover-your-tracks-0.html">如何隱藏你的蹤跡，避免跨省追捕[0]：爲啥要寫此文？</a></li>
+</ul>
+我們建議您儘可能多看他的文章，而不僅僅是上面列舉的那些。
+</p>
+<p>
+<table bgcolor="#ddddaa" width="90%" align="center">
+    <tr>
+	<td>如果您是在翻牆看這篇文章，那麼，取得
+	    <a href="https://www.torproject.org">Tor Browser</a> 以及訪問<a href="http://program-think.blogspot.com">編程隨想的博客</a>當然不會有問題。如果您以其他手段得到了這篇文章，而且翻牆又有困難，則可以先安裝 BitTorrent 公司的軟件
+	    <a href="https://www.getsync.com/">BT Sync</a>，把編程隨想的同步密鑰
+	    <pre>B7P64IMWOCXWEYOXIMBX6HN5MHEULFS4V</pre>
+	    導入 BT Sync 中，您就可以得到他的全部文章了。或者，您暫時不打算下載全部文章，而只是想得到翻牆軟件，那您可以把密鑰
+	    <pre>BTLZ4A4UD3PEWKPLLWEOKH3W7OQJKFPLG</pre>
+	    導入 BT Sync 中，下載編程隨想所收集的各種翻牆軟件。一旦翻牆成功，第一件事情就是去下載 <a href="https://www.torproject.org">Tor Browser</a>。
+	</td>
+    </tr>
+</table>
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Tor Browser (Tor 瀏覽器) 是一個簡單易用的軟件，它實際上是 Tor 和一個特別定製的
+FireFox 的結合體。只要您在它的瀏覽器內登錄 email 信箱，從 email
+網站上就難以追查到您的 IP 地址。但是，如果您使用 email 客戶端，而後者又沒有配置成通過 Tor 連接 email 服務器的模式，那您的 IP 就會被 email 服務器記錄下來。總之，如果您的一切網上活動都通過
+Tor 進行，您的活動蹤跡就會得到它的保護。具體點說，為了免於被當局追捕，您至少要保證下列活動始終在 Tor 瀏覽器中進行：
+<ul>
+    <li>申請匿名的 email 帳號；</li>
+    <li>登錄到匿名 email 帳號上；</li>
+    <li>利用匿名 email 帳號收發郵件；</li>
+    <li>下面要說的郵件轉發器及其 PGP 密鑰的獲取。</li>
+</ul>
+</p>
+
+<h2>3. 郵件轉發器 (remailer) 簡介</h2>
+<table bgcolor="#ddddaa" width="90%" align="center">
+    <tr>
+	<td><p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+	    正常的 email 都是通過 SMTP 協議傳輸的。假設您要發送一個 email 給
+	    alice@some.where，那您肯定要利用某個軟件（叫做 MUA，郵件代理，俗稱郵件客戶端）替您和您的
+	    SMTP 服務器交涉，通常 MUA 還參與信件的編輯和管理。您的 SMTP 服務器把郵件傳遞給下一個
+	    SMTP 服務器，如果 alice@some.where 不在那個 SMTP 服務器上，該服務器就會把郵件交給另一個
+	    SMTP 服務器……就這樣一直傳遞到 alice@some.where 所在的 SMTP 服務器爲止。這時候
+	    alice@some.where 的 SMTP 把郵件投送到 alice@some.where 信箱中，再由
+	    alice@some.where 的主人通過一個 MUA 把信件打開。在這整個過程中，
+	    <ul>
+		<li>信件的內容是公開的；</li>
+		<li>信件的發送地址和接收地址也是公開的；</li>
+		<li>每一個轉手信件的 SMTP 服務器都會在信件中留下戳記，因此信件的傳遞路徑和傳遞時間是可以追蹤的。</li>
+	    </ul>
+	    所謂公開，就是在信件傳遞的過程中，沿途的計算機都可以看見。打個比喻，就像明信片的郵寄類似，而且比這還要糟糕：郵遞員 (SMTP 服務器)
+	    在傳遞明信片的時候，沿途的路人（嗅探者）都可以圍觀明信片的全部信息：從
+	    email 的內容到它的傳遞路徑和傳遞時間，以及各種標識。</p>
+	</td>
+    </tr>
+</table>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+信件的私密性只涉及信件的內容，也就是說，衡量的是第三方能否看到信件主體的內容；信件的隱匿性則涉及收發人的地址以及傳遞的路徑和時間等，衡量的是這些信息能否被不該看到的人（包括收信人）看到。
+SMTP 的設計者沒有考慮這些，而是假設互聯網的使用者都是非禮勿視、非禮勿動君子。而現實則是，互聯網中充斥着挖掘大數據的流氓機構，還有求知（制）慾旺盛的政府（例如中共當局）。事實上，不僅僅是 SMTP，整個互聯網的設計（尤其是 TCP/IP）都有這樣的問題。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+Email 的私密性可以通過加密的方法來解決。這也許是 SMTP 設計者當初的想法。但是隱匿性不能通過加密解決——即使您把信件內容加密了，雖然各個 SMTP 服務器以及它周圍的路人不能準確獲知信件的內容，但是卻掩蓋不了您於某時某刻發了一個信件給某人的事實。在中國大陸，如果信件的內容觸犯了中共的禁忌，憑着這些信息就足以給郵件發送者定罪。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+郵件轉發器 (remailer) 就是解決 email 的隱匿性的，但它不一定實現 email 的私密性。簡單地說，就是在整個 SMTP 服務器的鏈路中插入一個或一系列的郵件轉發器，從而斬斷整個 SMTP 服務器聯路，再輔以其他手段把發信人和收信人的信息掩蓋起來。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+按照<a href="https://en.wikipedia.org/wiki/Anonymous_remailer">維基百科對 “Anonymous remailer” 的解釋</a>，目前的主流郵件轉發器分爲四類：化名服務器，
+I 型 (type I)，II 型 (type II) 和 III 型 (type III)。
+<ul>
+    <li>化名服務器，又叫 <a href="https://en.wikipedia.org/wiki/Nym_server">nym server （化名服務器）</a>。它不但能夠匿名地轉發 email（包括向新聞網發帖子，下同），而且還能夠提供一個化名回覆地址，讓收信人可以回覆但卻不知道真正的發信人地址。</li>
+    <li>I 型，又叫 <a href="https://en.wikipedia.org/wiki/Cypherpunk_anonymous_remailer">cypherpunk （加密朋克）匿名轉發器</a>。Cypherpunk 轉發器只是簡單地把發信人的地址換成自己的地址，使得收信人不知道真正的發信人是誰，因而也就無法回覆信件。這種轉發器能夠讓用戶最大限度地干預 email 的底層信息，而且還能多個同類的轉發器連環使用（下面會有詳細敘述），在一些特定的任務中就很有用處。但是，這種轉發器抵抗流量分析的能力不是太好，也就是說，如果一個嗅探者和轉發器位於同一個局域網內，它就有可能通過比較轉發器所收發的郵件的大小猜測出郵件轉發前後的路徑。</li>
+    <li><p>II 型，又叫 <a href="https://en.wikipedia.org/wiki/Mixmaster_anonymous_remailer">mixmaster 匿名轉發器</a>。這種轉發器會把信件拆分為很多個大小相同的片段，然後分別發送出去，再由接收端組裝起來。這就可以很好地抵抗流量分析法，在同等加密的前提下，所提供的隱匿性要優於 I 型轉發器。另外，它還可以實現化名發送
+    email，也就是說，在匿名發送 email 的同時，還能夠容許接收者回覆。這種轉發器需要安裝一個專門的軟件，例如 <a href="http://mixmaster.sourceforge.net/">mixmaster</a>。</p>
+    <p>這種轉發器採用 <a href="https://en.wikipedia.org/wiki/Mix_network">mix 網絡</a>傳輸數據，而 mix 網絡的設計目的就是要隱祕地（既要匿名，又要加密）傳輸數據。</p></li>
+    <li>III 型，又叫 <a href="https://en.wikipedia.org/wiki/Mixminion">Mixminion 轉發器</a>，得名於這種類型的標準實現：<a href="http://mixminion.net/">mixminion</a> 這個軟件。它同樣是基於 mix 網絡的，既能匿名地發送 email，又能匿名地接收
+    email。但是，按照作者 Nick Mathewson 於 2013 年 8 月發佈的公告，這個軟件已經停止開發。</li>
+</ul>
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+以上的分類方式以及描述並不是很清晰，大致上可以說，上述分類是基於轉發器的工作方式（協議）劃分的，而不是按照功能劃分的。從這個意義上說，化名服務器這個名稱就不太合適，因為 II, III 兩類轉發器也有化名的功能。
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+基於安全，如果不需要接收方回覆 email，在發送 email 時就不要保留化名回覆功能，因為，為了保持化名回覆功能，郵件轉發器上會保留回溯路徑的信息，一旦這些轉發器被入侵，就有可能順藤摸瓜找到 email 的始發者。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+最後，為了安全，請重溫<a href="#section2">本文第 2 節</a>中所說的那些準則。
+</p>
+
+<h2><a name="cypherpunk">4. Cypherpunk 匿名郵件轉發器的使用</a></h2>
+
+<h3>4.1 概述</h3>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+如果您要通過一個 cypherpunk 匿名郵件轉發器發送一封 email 給 alice@some.where，則可以尋找一個郵件轉發器，把
+email 加密後發送給它，告訴它轉交給 alice@some.where。轉發器收到您的信件首先解密，獲知這是交給 alice@some.where 的，於是它就做下列事情：
+<ul>
+    <li>把信頭上所有的信息擦掉。這樣，後續的 SMTP 服務器、路人（嗅探者）、接收者只能看到信件來自郵件轉發器，卻無法知道它真正來自何方。因為此前信件是加密的，無法通過比較信件的內容把發信人找出來。但是，可以從比較信件的大小和監視郵件轉發器的收發歷史得到一個概率性的推測。這已經有難度了。
+    <table bgcolor="#ddddaa" width="90%">
+	<tr>
+	    <td>
+		在交給轉發器之前， 發送給 alice@some.where 的信件可以不加密。但是，這樣做就很可能暴露 email 的發送者。例如，發送者用中國大陸境內的 email 信箱給
+		alice@some.where 發了一個 email，在提交給郵件轉發器的時候沒有加密，那麼大陸境內的那臺 SMTP 服務器上就會清清楚楚地看到：發送者給 alice@some.where
+		發送了什麼內容，以及該 email 是通過哪個轉發器轉交的。如果信件的內容或
+		alice@some.where 觸發了中共當局的禁忌，它就可以從始發的
+		SMTP 服務器上直接調閱全部信息——甚至還會發生這樣的情況：始發的
+		SMTP 因為敏感詞的觸發而自動上報給中共當局。
+		所以，提交給轉發器的內容必須加密，否則就會失去隱匿性。
+	    </td>
+	</tr>
+    </table>
+    </li>
+    <li>郵件轉發器收到您的 email 之後，它會隨機地延遲一段時間再轉發。發件人也可以通過指令明確地指定一個發送時間，或者一個大概的時間段。這樣，利用時間的相關性來推斷發信人的難度就更大了。</li>
+</ul>
+
+<h3><a name="section42">4.2 具體操作 (I): 最簡單的文本格式的信體</a></h3>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+我們這裏所說的文本格式的信體，是說信件的主體是由 ASCII 字符構成的文本文件，裏面沒有任何格式語言（例如超文本文件）的特徵。即便是含有漢字的文本文件也不能算是最簡單的文本格式的，超文本文件、帶有附件的文件當然更加不算。這類信件的處理見下一小節。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+我們假設發信人打算給 alice@some.where 發一個示愛的 email，但是又不想讓她知道自己是誰。<a name="toAlice">他打算寫這樣一些內容給 Alice:</a>
+<table bgcolor="#dddddd" width="90%" align="center">
+    <tr>
+	<td>Dear Alice,
+	    <p>I fell in love with you at the very first glace at you.
+	    And I love you more and more as time goes by.  But now I would
+	    not let you know who I am.  One day you'll find it romantically
+	    that I stand before you, with so much love.</p>
+	    Missing you day and light.</td>
+    </tr>
+</table>
+<a name="simple">這個 email 應當這樣發出去：</a>
+<ol>
+    <li>選定一個 cypherpunk 轉發器。
+    <p>
+    大多數郵件轉發器是由志願者運行的，也有一些是由各種機構維護的，它們本身不一定是永久性的，也不一定值得信任。要想得到這些轉發器的信息，可以通過搜索引擎搜索 “remailer” 等等。假設發信人選中了一個轉發器
+    &lt;goodman@cypher.punk.com&gt;。</p></li>
+    <li>向該郵件轉發器探詢它的 PGP 公鑰。方法就是給 goodman@cypher.punk.com
+    發一個 email，主題填上“remailer-key” 即可。在收到的回覆中會有它的 PGP 公鑰的
+    ID（一個八位數的十六進制數字），甚至是 PGP 公鑰的全部內容。需要注意的是，
+    <ul>
+	<li>一個郵件轉發器可能會同時支持多種協議（即，身兼多種類型的郵件轉發器），所以，必須要仔細看清楚，是
+	cypherpunk 轉發器（可能會簡寫為“cpunk”，也可能什麼都不標）的 PGP 公鑰；</li>
+	<li>PGP 公鑰還分爲 RSA 和 DSA 兩種，這兩種只要任選一種即可。</li>
+    </ul>
+    如果在回覆的郵件中出現類似於
+    <table bgcolor="#dddddd" align="center">
+	<tr>
+	    <td><pre>-----BEGIN PGP PUBLIC KEY BLOCK-----
+Version: Mixmaster 3.0rc1 (OpenPGP module)
+
+mQCNA1BGaqkAAAEEANdshmdK4hzvCP4I1zEf2fAgPs7tkxalYbazfXYBg2FjgBlS
+JT8fiquu+NEVl0lKXwz8951D+Dgslqj5QxOt8Z7x/dRIxOZ1pEWuYb3tSTgJc0YA
+TVa4FZhbaAmpKs5Hu2FTb1QdkyK7fJqWufQDcL+tD5WxsCiNcwIy1unGILn3AAUR
+tCFOb21lbiBOZXNjaW8gPHJlbWFpbGVyQGRpenVtLmNvbT6JAJUDBRBQRmqpAjLW
+c6YgufcBAe6BmADT62RSzgtvGer9s2x6MoUrsFkly6nSxN3LRVP4P5P9cueWzure
+5iuhvtWF1dSbgDh8739Ca/+hBO93+9eVXD6t1x5Bg6zZ4VXvHimwg6pkgYdnGV3R
+3LPDdKP2djvMKq4o9/NmxmF1druw55GdZ6RiY0Jke3B33eX0+Y6gv5Q4gA==
+=ai/2
+-----END PGP PUBLIC KEY BLOCK-----</pre></td>
+	</tr>
+    </table>
+    的片段，那就把這些內容存入一個文件中，假設文件名為
+    <code>PGPkey-goodman</code>；如果回覆的郵件中只有 PGP 公鑰的
+    ID，那就需要到網上的某個 PGP 公鑰服務器去索取。<font color="#ff0000">在這裏，我們強烈建議不要用
+	“gpg --recv-keys” 這樣的命令，而是用 Tor Browser 連接到某個服務器的網頁上，查詢，下載。詳細的方法可參看
+	<a href="http://cyber-china.blogspot.de/2015/03/gpg.html">《我的 PGP 密鑰》</a>中的 3.1.2 節。</font>若不然，一旦下載上述密鑰的行爲被中共當局記錄在案，就有可能成為順藤摸瓜的線索。</li>
+    <li>把上述公鑰導入 PGP 或 GPG。
+    <p>這首先需要系統中有 <a href="http://www.pgp.com">PGP</a> 或
+    <a href="https://www.gnupg.org">GPG</a> 這樣的軟件（只要有一個即可）。如果您的網上活動正在或者即將與中共當局發生對抗，那麼，不用猶豫，您需要這樣一個軟件。它們是信息安全方面的基本工具，其中 PGP 是一款商業軟件，也是這類軟件的鼻祖，如果您的系統中沒有這樣的軟件，那還是考慮開源的 GnuPG（簡稱 GPG）吧。<font color="green">它的使用方法可以參考<a href="http://cyber-china.blogspot.de/2015/03/gpg.html">《》</a>中所列的一些文獻。</font></p>
+    <p>把前述的 PGP 公鑰導入 GnuPG（在 Windows 系統中，是
+    <a href="http://www.gpg4win.org/">Gpg4win</a>，在 MacOS 中是
+    <a href="http://macgpg.sourceforge.net/">MacGPG</a>）的方法是：在虛擬終端（又稱命令行工具，在 Windows 系統中稱命令提示符）中執行
+    <table bgcolor="#666666">
+	<tr>
+	    <td>
+<pre><font color="#ffffff">$ gpg --import PGPkey-goodman</font></pre>
+	    </td>
+	</tr>
+    </table>
+    其中 <code>PGPkey-goodman</code> 是存有轉發器 PGP 公鑰的那個文件。</p></li>
+    <li>現在把致 Alice 的信作成內容如下的一個文件：
+<table bgcolor="#dddddd" width="90%" align="center">
+<tr>
+<td>::<br />
+Anon-To: alice@some.where<br /><br />
+
+##<br />
+Subject: To Alice<br />
+<p>Dear Alice,</p>
+<p>I fell in love with you at the very first glace at you.
+And I love you more and more as time goes by.  But now I would
+not let you know who I am.  One day you'll find it romantically
+that I stand before you, with so much love.</p>
+Missing you day and light.</td>
+</tr>
+</table>
+將來 alice@some.where 就會收到一封主題是 “To Alice” 的郵件。需要注意，
+<ul>
+    <li>第一行必須是兩個連寫的冒號 (ASCII 字符)，沒有其它字符；</li>
+    <li><span style="background-color: cyan"><code>Anon-To: </code></span>以及下面的
+    <span style="background-color: cyan"><code>##</code></span> 和
+    <span style="background-color: cyan"><code>Subject: </code></span>
+    必須頂格寫，不能走樣；</li>
+    <li><span style="background-color: cyan"><code>##</code></span> 上面以及
+    <span style="background-color: cyan"><code>Subject: </code></span>
+    下面的空行不能缺少。
+</ul></li>
+<li>假設上述文件的文件名為 <code>instruction</code>，用下面的命令加密：
+    <table bgcolor="#666666">
+	<tr>
+	    <td>
+<pre><font color="#ffffff">$ gpg -a -o msg -e instruction</font></pre>
+	    </td>
+	</tr>
+    </table>
+    回車之後，gpg 會詢問用哪個密鑰加密。把 goodman@cypher.punk.com 輸入進去，回車即可。如果 gpg 還詢問其他問題，根據提示回答即可。加密之後的文件為
+    <code>msg</code>。假設它的內容是這樣子的：
+    <table bgcolor="#dddddd" align="center">
+	<tr>
+	    <td><pre>-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1.4.19 (GNU/Linux)
+
+DjLIhwA6WcYgufcBA/959K7PYjAR5diQZWMyOfneZh5HL5JiNtvSWzsXQwa84e9O
+6nZV0ZOSCSndDGfKaxpeYkkYFnWe2JA6tFS4ebW4S4PZZzR5ZBYYOpRbM95DAXt0
+0/JwoRtFqMECtOHeFr9DgDuARhcmRTkY6Yo5WOGpCDQXZGZMs9Z+jyHG3XLyh8nA
+mNl+oZYLAuRJcX86KxzxvEvTWZCvuvXOcpQ99OgB1gv7t8fQSnZgrZb4OWq+GIKE
+ttCzCII+dkCGG8+3dvsDBa/D8I5iv9hrY9dWpppNcIxoDwIt6F0Ux8Tf5qZMctsX
+SrFsl+zbATfXLG18d1EPEtB8pY/Q+S8Ff8bAYc4I1kUjQ0GkrQ33wxF5bT1doQKh
+MK6bwioxYJLfYW27lxLBP8lSsuSd7Gln6R/iFJ+xTMdPJ/c/ovkbg83I4IZPI4bA
+DPW2l6HlK4+HDQyNxpGKZSj1/f8TKY7eui5+4X7P0MY3obbN93u++e6BcouajbxF
+73t/pkRAWsc9QfUZ37dSgHm4NLgP6lw0T5ikav23L9EJJH7YnSl1+5IjyrxCfqNb
+mGEmBSXdr4ZBCqqQKQeFTJ1cyP8rO9ox8/rZkMX8HVLiLv+MGr2fyt+eJGGBLWzw
+g27KVtey4e36
+=WPJz
+-----END PGP MESSAGE-----</pre></td>
+	</tr>
+    </table>
+    那麼，我們只要把下面的內容粘貼到發給 goodman@cypher.punk.com 的 email 主體中即可：
+    <table bgcolor="#dddddd" align="center">
+	<tr>
+	    <td><pre>::
+Encrypted: PGP
+
+-----BEGIN PGP MESSAGE-----
+Version: GnuPG v1.4.19 (GNU/Linux)
+
+DjLIhwA6WcYgufcBA/959K7PYjAR5diQZWMyOfneZh5HL5JiNtvSWzsXQwa84e9O
+6nZV0ZOSCSndDGfKaxpeYkkYFnWe2JA6tFS4ebW4S4PZZzR5ZBYYOpRbM95DAXt0
+0/JwoRtFqMECtOHeFr9DgDuARhcmRTkY6Yo5WOGpCDQXZGZMs9Z+jyHG3XLyh8nA
+mNl+oZYLAuRJcX86KxzxvEvTWZCvuvXOcpQ99OgB1gv7t8fQSnZgrZb4OWq+GIKE
+ttCzCII+dkCGG8+3dvsDBa/D8I5iv9hrY9dWpppNcIxoDwIt6F0Ux8Tf5qZMctsX
+SrFsl+zbATfXLG18d1EPEtB8pY/Q+S8Ff8bAYc4I1kUjQ0GkrQ33wxF5bT1doQKh
+MK6bwioxYJLfYW27lxLBP8lSsuSd7Gln6R/iFJ+xTMdPJ/c/ovkbg83I4IZPI4bA
+DPW2l6HlK4+HDQyNxpGKZSj1/f8TKY7eui5+4X7P0MY3obbN93u++e6BcouajbxF
+73t/pkRAWsc9QfUZ37dSgHm4NLgP6lw0T5ikav23L9EJJH7YnSl1+5IjyrxCfqNb
+mGEmBSXdr4ZBCqqQKQeFTJ1cyP8rO9ox8/rZkMX8HVLiLv+MGr2fyt+eJGGBLWzw
+g27KVtey4e36
+=WPJz
+-----END PGP MESSAGE-----</pre></td>
+	</tr>
+    </table>
+    其中第一行是兩個冒號（由於排版的原因，似乎有一個空行）。至於郵件的主題，隨便寫或者空着都可以。使用 MUA 發送的時候，必須注意要發送文本格式的郵件，不能使用超文本 (HTML) 格式。
+    </li>
+</ol>
+</p>
+
+<h3>4.3 具體操作 (II): 較爲複雜的信體</h3>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+如果給 alice@some.where 的 email 存在下列任何一種情形，就不能直接用上面的方法了：
+<ul>
+    <li>主題或主體中有 ASCII 字符集以外的字符，例如漢字；</li>
+    <li>帶有附件；</li>
+    <li>信件的主題是超文本 (HTML) 格式的。</li>
+</ul>
+這時候，我們可以找一個運行在本地機器上的 MUA （郵件客戶端），要求它能夠支持我們所需要的功能（例如，支持漢字，或支持附件，或支持 HTML 格式的信體）。我們先像正常發送一樣在 MUA
+中編輯信體，但是最後並不把它發走，而是存成草稿。之後，把 MUA 關閉，到它存儲草稿的目錄（文件夾）中找出剛纔的草稿。我們用一個文本編輯器把這個草稿打開，把其中 “Content-Type:” 開始的那行（如果有多行，以“Subject:” 下面的那一行爲準）以及以下內容替代 <a href="#toAlice">4.2 節中寫給 Alice 的信</a>，餘下的操作照着
+<a href="#simple">4.2 節中的步驟</a>進行即可。
+</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+MUA 的種類繁多，我們不敢保證以上敘述總是奏效，所以，在正式發送匿名郵件之前，您應該先利用自己的
+MUA 和自己的 email 帳號測試一下。至少，對於發送 HTML 格式的 email，使用
+Mozilla Thunderbird 是可以勝任的。</p>
+
+<h3>4.4 對已知明文和公鑰進行攻擊的安全性</h3>
+
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+以上操作的結果，轉發器接收到的信件是加密的，它前面的SMTP
+經手者（以及和經手者同處一個局域網的嗅探者）只知道信件是發送給轉發器的，也知道發信人，卻無法知道真正的接收者，也無法知道信件的具體內容。Cypherpunk
+轉發器後面的 SMTP 經手者（以及與之同處一個局域網的嗅探者）能夠知道收件人及其接收的內容，但是無法知道真正的發件人。</p>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+和 Cypherpunk 轉發器同處一個局域網的嗅探者 S 既能夠刺探發件人發給轉發器的密件
+E， 也能夠刺探轉發器傳遞給收件人的 email 內容 M，但是，它無法直接把二者聯繫起來，因為轉發器會收到很多委託，然後再一一把它們發走（假設這些委託都沒有錯誤）。但是，
+S 可以光明正大地索取轉發器的 PGP 公鑰，如果它把刺探來的 M 按照發件人的做法加上
+Anon-To: 信頭，然後再用轉發器的 PGP 公鑰加密，不就可以和刺探來的衆多密件比較，從而得知誰是發件人了嗎？這個概率是很低的，因為，即使用同樣的公鑰對同樣的明文進行加密，不同時刻得到的密文也是不同的。所以，嗅探者加密出來的密文和發件人加密出來的密文幾乎是不可能一樣的。這樣一個嗅探者唯一能做的就是根據 E 和 C 的文件大小猜測二者有沒有關聯。</p>
+
+<h3>4.5 多個 Cypherpunk 匿名郵件轉發器接力傳送</h3>
+<p>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+如果郵件轉發器是值得信任的，它周圍的路人（與之同一個局域網內的計算機用戶）也都是君子，這就可以保證 email 的隱匿性了。但是沒有人能夠保證這一切。爲此，我們可以選擇好幾個轉發器，以降低暴露的概率。以三個轉發器 A, B, C 的情形爲例，步驟如下：
+<ul>
+    <li>我們先把真正要寄給 alice@some.where 的信件內容 M 做成請 C 轉交給
+    alice@some.where 的格式， 用 C 的密鑰加密，然後加上“Encrypted: PGP” 信頭（包括上面一行兩個冒號和下面一個空行，下同）形成一個密文 C(M)。</li>
+    <li>我們把 C(M) 作爲信件的內容，做成一個請 B 轉交給 C 的格式，然後用 B
+    的密鑰加密，再加上“Encrypted: PGP”信頭形成一個密文 B(C(M))。</li>
+    <li>我們以 B(C(M)) 為信件的內容，做成一個請 A 轉交給 B 的格式，用 A
+    的密鑰加密後，再加上“Encrypted: PGP” 信頭形成一個密文 A(B(C(M)))。</li>
+    <li>我們把 A(B(C(M))) 發送給 A。於是，A 收到後一解密發現 B(C(M)) 是發給 B
+    的，則 A 只知道發信人，卻不知道信件的內容和真正的收信人；B 收到 B(C(M))
+    後，一解密發現信件 C(M) 是給 C 的，則 B 既不知道真正的發信人和收信人，也不知道信件的內容
+    M；轉發器 C 從 B 那裏收到信件 C(M) 之後，一解密獲得了收信人地址
+    alice@some.where 以及信件內容 M，但是它不知道發信人是誰。</li>
+    <li>alice@some.where 以及她的 SMTP 服務器（及嗅探者）從 C 收到 M 後，只知道
+    M 的內容，知道它來自 C，卻不知道真正的發信人。</li>
+</ul>
+原則上，中間的轉發器越多隱匿性越好，但是現在的轉發器大都不是永久性的，一旦中間某個轉發器不工作了，真正的接收者 alice@some.where 就會收不到郵件。此外，由於每個轉發器都會延遲轉發，太多的轉發器會導致很大的延遲。
+</p>
+
+<ul>
+    <li><a href="http://email.about.com/library/weekly/aa031300a.htm">Send Email Anonymously (1)</a></li>
+    <li><a href="http://email.about.com/library/weekly/aa031300a.htm">Send Email Anonymously (2)</a></li>
+    <li><a href="http://email.about.com/library/weekly/aa032700a.htm">Send Email Anonymously (3)</a></li>
+    <li><a href="http://email.about.com/library/weekly/aa031300a.htm">Send Email Anonymously (4)</a></li>
+    <li><a href="http://email.about.com/library/weekly/aa042400b.htm">Send Email Anonymously (5)</a></li>
+</ul>
+
+<h2>5. I2P-Bote</h2>
+
+<br /><br /><br />
+<hr width="80%" />
+<h3 align="center">作者聲明</h3>
+<ol>
+    <li>本文版權為<a href="mailto:infstrucn@gmail.com">追本溯源</a>所有，<!--
+    -->原文發佈在博客<a
+       href="http://cyber-china.blogspot.com">「信息時代的中國社會架構」</a><!--
+    -->上，歡迎轉載。轉載時，請保留本聲明。</li>
+    <li>轉載時，如果不對原文的主體作改動，而只是在排版方面作修飾，則無須徵求<!--
+    -->作者意見。</li>
+    <li>作者追本溯源的 PGP 密鑰 ID 為 0x4C981B6E, 可在全球各大公鑰服務器上<!--
+    -->獲取。為防 ID 碰撞，請仔細覈對密鑰指紋 (fingerprint) <br />
+    6522 81F2 F197 3C3F E8C3  BA2F 51A9 A034 4C98 1B6E。</li>
+    <li>在目前階段，博客
+    <a href="http://cyber-china.blogspot.com">&lt;http://cyber-china.blogspot.com&gt;</a>
+    上的文章皆出自作者追本溯源（除非聲明為轉載文章）。如果日後由於種種原因<!--
+    -->需要廢棄此博客，或者另立博客，或者需要開闢新的發佈途徑，作者將發佈<!--
+    -->帶有電子簽名的聲明公開確認，簽名所用的 PGP 密鑰即上述 ID 為 0x4C981B6E
+    者。</li>
+    <li>出自追本溯源的文章日後會有線下閱讀的版本。線下閱讀的版本都會附有<!--
+    -->追本溯源的電子簽名（文件名後綴為 <code>asc</code> 或
+    <code>sig</code>），簽署所用的密鑰即上述 ID 為 0x4C981B6E 者。對於這些<!--
+    -->線下閱讀版本，歡迎大家以各種方式傳播，惟請傳播時連同電子簽名一併<!--
+    -->附上，作爲覈驗真僞的憑證。</li>
+    <li>凡<a href="mailto:infstrucn@gmail.com">發送給追本溯源</a>的文件，<!--
+    -->如果需要加密，則同樣用上述 ID 為 0x4C981B6E 的 PGP 密鑰。</li>
+</ol>
+</body>
+</html>
