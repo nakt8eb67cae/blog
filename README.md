@@ -16,19 +16,21 @@
 - 本博客不可避免地會闡述作者對於建立一個新中國的個人理念，以及實現上述兩個目標的
   具體建議。這些內容僅供參考，以期達到拋磚引玉的效果。
 
+
 ## 如何得到源代碼
 
-### 方法一：
+### 方法一：如果系統中有版本控制軟件 [git](https://git-scm.com), 可以在命令行中用
+  git clone https://github.com/infcn/blog.git
+得到源代碼以及版本控制信息。
+
+### 方法二：
 
 - 用瀏覽器瀏覽[文檔源代碼的維護網址](https://github.com/infcn/blog)。
 - 點擊網頁右側的“[Download ZIP]”(https://github.com/infcn/blog/archive/master.zip)。
 
-### 方法二：用適當的軟件（通常瀏覽器就可以）直接下載
+### 方法三：用適當的軟件（通常瀏覽器就可以）直接下載
   <https://github.com/infcn/blog/archive/master.zip>
 
-### 方法三：如果系統中有版本控制軟件 [git](https://git-scm.com)，可以在命令行中用
-  git clone https://github.com/infcn/blog.git
-得到源代碼以及版本控制信息。
 
 ## 參與
 
@@ -37,11 +39,10 @@
 - [正體中文教程](https://git-scm.com/book/zh-tw)
 - [簡體中文教程](https://git-scm.com/book/zh)
 
+
 ## 許可
 
-在不作篡改的前提下，歡迎自由傳播和轉載本項目中的全部或部分文檔。
-- 傳播時，請務必附上相應文檔的電子簽名（假設一個文檔的文件名為 <filename>，則它的電子簽名就是文件名為 <filename.asc> 或 <filename.sig> 的那個文件）。
-- 批量傳播文檔時，還請附上本文件及其電子簽名。
+見 <[LICENSE]>(LICENSE)。
 
 
 ## 感謝您的關注和參與！

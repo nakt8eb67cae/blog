@@ -1,0 +1,24 @@
+# 許可
+
+在線瀏網址：		<http://cyber-china.blogspot.com>
+文檔源代碼的維護網址：	<https://github.com/infcn/blog>
+
+在不作篡改刪節的前提下，歡迎自由傳播和轉載本項目中的全部或部分文檔。
+- 傳播時，請務必附上相應文檔的電子簽名（假設一個文檔的文件名為 <filename>,
+  則它的電子簽名就是文件名為 <filename.asc> 或 <filename.sig> 的那個文件）。
+- 批量傳播文檔時，還請附上本文件及其電子簽名。
+- 轉載時，請務必附上文末的聲明。
+
+
+# License
+
+On line URL:			<http://cyber-china.blogspot.com>
+Souce code of this archive:	<https://github.com/infcn/blog>
+
+It is appreciated, and free, to release or post all or some articles in this
+archive, with no content modified.
+- For releasing, please attach the GPG signature file of the corresponding
+  article.  (Assume that the signed file is named as <filename>, then its GPG
+  signature file is named as either <filename.asc> or <filename.sig>.)
+- To release more than one article, please also attach this LICENSE.
+- When an article is pasted, the statement below it should also be pasted.
