@@ -2,7 +2,7 @@
 # ——追本溯源的博客
 
 
-在線瀏網址：            <http://cyber-china.blogspot.com>
+在線瀏覽網址：          <http://cyber-china.blogspot.com>
 
 文檔源代碼的維護網址：  <https://github.com/infcn/blog>
 
@@ -17,6 +17,8 @@
 - 本博客不可避免地會闡述作者對於建立一個新中國的個人理念，
   以及實現上述兩個目標的具體建議。這些內容僅供參考，以期達到拋磚引玉的效果。
 
+博客文檔的起點：[index.html](index.html)
+
 
 ## 如何得到源代碼
 
@@ -25,7 +27,7 @@
 
   git clone https://github.com/infcn/blog.git
 
-得到源代碼以及版本控制信息。
+得到源代碼以及版本控制信息。下面的兩種方法都不能得到版本控制信息。
 
 ### 方法二：
 
@@ -39,7 +41,9 @@
 
 ## 參與
 
-願意參與相關項目的各路賢達，我在此竭誠歡迎。參與者需要使用 git，相關的教程如下：
+願意參與相關項目的各路賢達，筆者在此竭誠歡迎。
+
+參與者需要使用 git，相關的教程如下：
 - [英文教程](https://git-scm.com/book/en/v2)
 - [正體中文教程](https://git-scm.com/book/zh-tw)
 - [簡體中文教程](https://git-scm.com/book/zh)
