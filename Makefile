@@ -17,7 +17,7 @@ GPG_SIGN_KEY = infcn
 GPG_SIGN_ARMORED = no
 
 all:
-	if [[ -n "$(SIGNED_FILES)" ]]; then \
+	@if [[ -n "$(SIGNED_FILES)" ]]; then \
 	    for file in $(SIGNED_FILES); do \
 	        if [[ "$(GPG_SIGN_ARMORED)" == "yes" ]]; then \
 		    make $${file}.asc; \
